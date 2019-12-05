@@ -1,21 +1,80 @@
-<div class="row" >
 
-<div class="col-lg-3" *ngFor=" let obj of categories" >
-  <div class="ibox ">
-    <div class="ibox-title">
-      <span class="label label-success float-right">Monthly</span>
-      <h5>Income</h5>
-    </div>
-    <div class="ibox-content">
-      <h1 class="no-margins">40 886,200</h1>
-      <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>
-      <small>Total income</small>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="ibox float-e-margins">
+      <div class="ibox-content text-center p-md">
+
+        <h2><span class="text-navy">Statistics for You !</span></h2>
+
+
+      </div>
     </div>
   </div>
 </div>
 
 
+<div class="row">
+  <div class="col-lg-6">
+    <div class="ibox float-e-margins">
+      <div class="ibox-content text-center p-md">
+
+        <h4 class="m-b-xxs">Encadred Categories Stats <span class="label label-primary">NEW</span></h4>
+        <small>   this is the most encadred categories you ever encadred !   </small>
+        <div class="row" >
+
+          <div class="col-lg-6" *ngFor=" let obj of categories, let  i = index" >
+            <div class="ibox ">
+              <div class="ibox-title">
+                <span class="label label-success float-right">Times</span>
+                <h5>{{poids[i]+1}}</h5>
+              </div>
+              <div class="ibox-content">
+                <h1 class="no-margins">{{obj}}</h1>
+                <div class="stat-percent font-bold text-success"><i class="fa fa-bolt"></i></div>
+                <small>Total income</small>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-lg-6">
+    <div class="ibox float-e-margins">
+      <div class="ibox-content text-center p-md">
+
+        <h4 class="m-b-xxs">Basic left side navigation layout </h4><small>(main layout)</small>
+        <p>Available configure options</p>
+        <span class="simple_tag">Collapse menu</span>
+        <span class="simple_tag">Fixed sidebar</span>
+        <span class="simple_tag">Scroll navbar</span>
+        <span class="simple_tag">Top fixed navbar</span>
+        <span class="simple_tag">Boxed layout</span>
+        <span class="simple_tag">Scroll footer</span>
+        <span class="simple_tag">Fixed footer</span>
+        <div class="m-t-md">
+          <p>Check the Dashboard v.4 with basic layout</p>
+          <div class="p-lg">
+            <a ui-sref="dashboards.dashboard_4_1"><img class="img-responsive img-shadow" src="img/dashboard4_1.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
 </div>
+
+
+
+
 
 <div>
   <div>

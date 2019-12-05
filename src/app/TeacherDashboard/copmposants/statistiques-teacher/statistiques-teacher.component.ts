@@ -28,6 +28,9 @@ export class StatistiquesTeacherComponent implements OnInit {
   categories: string[] = [];
    poids: number[] = [];
 
+  categoriesRapported: string[] = [];
+  poidsRapported: any[] = [];
+
 
   public barChartOptions: ChartOptions = {
     responsive: true,
@@ -252,14 +255,32 @@ export class StatistiquesTeacherComponent implements OnInit {
       (v) => {
 
         // v.values();
+
         this.categories =  Object.keys(v);
-        this.poids = Object.values(v);
+        this.poids = Object.keys(v).map(key => v[key]);
+      },
+      e => {},
+      () => {
+        console.log('jksfnskjvnskj' + this.poids );
+      });
+  }
+
+
+  public getMostNottedCategoriesRapported() {
+
+
+    this.teacherSer.getmosNottedrapportedCategorie().subscribe(
+
+      (v) => {
+
+        // v.values();
+        this.categoriesRapported =  Object.keys(v);
+        this.poidsRapported = Object.values(v);
       },
       e => {},
       () => {
         // console.log('jksfnskjvnskj' + categories[1]);
       });
   }
-
 
 }

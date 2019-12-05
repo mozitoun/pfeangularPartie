@@ -102,7 +102,10 @@ getmosNottedencadredCategorie() {
   return  this.httpClientSer.get<any[]>('http://localhost:9080/PlatformPFE-web/rest/teacher/bestnoteencadredcategorie/'
   + this.teacher.id);
 }
-
+  getmosNottedrapportedCategorie() {
+    return  this.httpClientSer.get<any[]>('http://localhost:9080/PlatformPFE-web/rest/teacher/bestnoterapportedcategorie/'
+      + this.teacher.id);
+  }
 
 
 
